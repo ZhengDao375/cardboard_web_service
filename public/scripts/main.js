@@ -218,7 +218,7 @@ function authStateObserver(user) {
 
     // Show sign-in button.
     signInButtonElement.removeAttribute('hidden');
-    window.location.href = "index.html"
+    
   }
 }
 
