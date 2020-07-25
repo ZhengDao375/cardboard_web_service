@@ -31,10 +31,6 @@
   <title>Cardboard | Introductions Done Right</title>
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
-
-  <!-- Web Application Manifest -->
-  <link rel="manifest" href="manifest.json">
-
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="Cardboard">
@@ -50,19 +46,11 @@
   <meta name="msapplication-TileColor" content="#3372DF">
   <meta name="msapplication-navbutton-color" content="#303F9F">
 
-  <!-- Material Design Lite -->
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
-  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script> -->
+  <link rel="icon" href="images/icon-brown3.png" type="image/x-icon">
 
-  <!-- App Styling -->
-  <!-- <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"> -->
-  <!-- <link rel="stylesheet" href="styles/main.css"> -->
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json">
 
-  <!-- TODO: Enable First Input Delay polyfill library. -->
-  <!--  <script type="text/javascript">!function(n,e){var t,o,i,c=[],f={passive:!0,capture:!0},r=new Date,a="pointerup",u="pointercancel";function p(n,c){t||(t=c,o=n,i=new Date,w(e),s())}function s(){o>=0&&o<i-r&&(c.forEach(function(n){n(o,t)}),c=[])}function l(t){if(t.cancelable){var o=(t.timeStamp>1e12?new Date:performance.now())-t.timeStamp;"pointerdown"==t.type?function(t,o){function i(){p(t,o),r()}function c(){r()}function r(){e(a,i,f),e(u,c,f)}n(a,i,f),n(u,c,f)}(o,t):p(o,t)}}function w(n){["click","mousedown","keydown","touchstart","pointerdown"].forEach(function(e){n(e,l,f)})}w(n),self.perfMetrics=self.perfMetrics||{},self.perfMetrics.onFirstInputDelay=function(n){c.push(n),s()}}(addEventListener,removeEventListener);</script> -->
-  <!-- Core css file -->
   <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="fonts/line-icons.css">
   <link rel="stylesheet" type="text/css" href="styles/animate.css">
@@ -127,25 +115,38 @@
             <!-- <a class="btn btn-border" href="../html/page-login.html">Sign In</a> -->
             <div hidden id="user-pic"></div>
             <div hidden id="user-name"></div>
-            <a hidden id="sign-out" class="btn btn-border">
+            <a hidden class="btn btn-border sign-out">
               Sign-out
             </a>
-            <a id="sign-in" class="btn btn-border">
+            <a class="btn btn-border sign-in">
               Sign in with Apple
             </a>
           </div>
         </div>
       </div>
-
-      <ul class="mobile-menu navbar-nav">
-        <li><a class="page-scroll" href="#hero-area">Home</a></li>
-        <li><a class="page-scroll" href="#services">Services</a></li>
-        <li><a class="page-scroll" href="#feature">feature</a></li>
-        <li><a class="page-scroll" href="#team">Team</a></li>
-        <li><a class="page-scroll" href="#pricing">Pricing</a></li>
-        <li><a class="page-scroll" href="#contact">Contact</a></li>
-      </ul>
-
+      <div class="mobile-menu">
+        <ul class="navbar-nav">
+          <li><a class="page-scroll" href="#hero-area">Home</a></li>
+          <li><a class="page-scroll" href="#services">Services</a></li>
+          <li><a class="page-scroll" href="#feature">feature</a></li>
+          <li><a class="page-scroll" href="#team">Team</a></li>
+          <li><a class="page-scroll" href="#pricing">Pricing</a></li>
+          <li><a class="page-scroll" href="#contact">Contact</a></li>
+          <!-- <li><a hidden class="btn btn-border sign-out" href="">Sign-out</a></li>
+          <li><a class="btn btn-border sign-in" href="">Sign in with Apple</a></li> -->
+        </ul>
+        <div class="btn-sing float-left">
+          <!-- <a class="btn btn-border" href="../html/page-login.html">Sign In</a> -->
+          <div hidden id="user-pic"></div>
+          <div hidden id="user-name"></div>
+          <a hidden class="btn btn-border sign-out" style="color: #666;">
+            Sign-out
+          </a>
+          <a class="btn btn-border sign-in" style="color: #666;" onclick="signIn()">
+            Sign in with Apple
+          </a>
+        </div>
+      </div>
     </nav>
 
     <div id="hero-area" class="hero-area-bg particles_js">
@@ -173,7 +174,8 @@
     <div class="container">
       <div class="section-header text-center wow fadeInDown" data-wow-delay="0.3s">
         <h2 class="section-title">Safe From Covide-19 and beyond</h2>
-        <p>Social distancing has halted our ability to physically reach out and share. Cardboard allows you to transmit your introduction safely whether from 6 feet or 60 miles away</p>
+        <p>Social distancing has halted our ability to physically reach out and share. Cardboard allows you to transmit
+          your introduction safely whether from 6 feet or 60 miles away</p>
       </div>
       <div class="row">
         <div class="col-md-12 col-lg-12 col-xs-12">
@@ -620,36 +622,35 @@
             the present, and save the environment for the future
           </p>
           <!-- <div class="footer-logo mb-3"></div> -->
-          <img
-            src="images/apple-store-badge.png" alt="">
-        <!-- </div> -->
-      </div>
-      <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.4s">
-        <h3 class="footer-titel">Company</h3>
-        <ul>
-          <li><a href="#">Press Releases</a></li>
-          <li><a href="#">Mission</a></li>
-          <li><a href="#">Strategy</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
-        <h3 class="footer-titel">About</h3>
-        <ul>
-          <li><a href="#">Career</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Clients</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.8s">
-        <h3 class="footer-titel">Find us on</h3>
-        <div class="social-icon">
-          <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
-          <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
-          <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
-          <a class="linkedin" href="#"><i class="lni-linkedin-filled"></i></a>
+          <img src="images/apple-store-badge.png" alt="">
+          <!-- </div> -->
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.4s">
+          <h3 class="footer-titel">Company</h3>
+          <ul>
+            <li><a href="#">Press Releases</a></li>
+            <li><a href="#">Mission</a></li>
+            <li><a href="#">Strategy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
+          <h3 class="footer-titel">About</h3>
+          <ul>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Clients</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.8s">
+          <h3 class="footer-titel">Find us on</h3>
+          <div class="social-icon">
+            <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
+            <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
+            <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
+            <a class="linkedin" href="#"><i class="lni-linkedin-filled"></i></a>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   </footer>
 

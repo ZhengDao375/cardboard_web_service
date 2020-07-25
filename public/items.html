@@ -12,11 +12,12 @@
         content="admin template, Cardboard admin template, dashboard template, flat admin template, responsive admin template, web app, Light Dark version">
     <meta name="author" content="GetBootstrap, design by: puffintheme.com">
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/icon-brown3.png" type="image/x-icon">
     <!-- VENDOR CSS -->
     <link rel="stylesheet" href="styles/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/vendor/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/vendor/animate-css/vivify.min.css">
+    <link rel="stylesheet" href="styles/vendor/sweetalert/sweetalert.css"/>
 
     <link rel="stylesheet" href="styles/vendor/c3/c3.min.css" />
 
@@ -70,7 +71,7 @@
                                         class="icon-bubbles"></i><span class="notification-dot bg-pink">2</span></a>
                             </li>
                             <li>
-                                <a href="index.html" class="icon-menu"><i class="icon-power"></i></a>
+                                <a class="icon-menu sign-out" style="cursor: pointer"><i class="icon-power"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -219,7 +220,7 @@
                             <li><a href="app-inbox.html"><i class="icon-envelope"></i><span>Inbox</span></a></li>
                             <li><a href="app-chat.html"><i class="icon-bubbles"></i><span>Messenger</span></a></li>
                             <li><a href="app-calendar.html"><i class="icon-calendar"></i><span>Event</span></a></li>
-                            <li><a href="page-profile.html"><i class="icon-user"></i><span>Profile</span></a></li>
+                            <li><a href="profile.html"><i class="icon-user"></i><span>Profile</span></a></li>
                             <li><a href="page-invoices.html"><i class="icon-printer"></i><span>Invoice</span></a></li>
                             <li><a href="page-timeline.html"><i class="icon-list"></i><span>Timeline</span></a></li>
                         </ul>
@@ -533,18 +534,18 @@
             <div class="sidebar-scroll">
                 <div class="user-account">
                     <div class="user_div">
-                        <img src="images/team/team-01.jpg" class="user-photo" alt="User Profile Picture">
+                        <img src="images/profile_placeholder.png" class="user-photo" alt="User Profile Picture">
                     </div>
                     <div class="dropdown">
                         <span>Welcome,</span>
                         <a href="javascript:void(0);" class="dropdown-toggle user-name"
                             data-toggle="dropdown"><strong>Mark Holt</strong></a>
                         <ul class="dropdown-menu dropdown-menu-right account vivify flipInY">
-                            <li><a href="page-profile.html"><i class="icon-user"></i>My Profile</a></li>
-                            <li><a href="app-inbox.html"><i class="icon-envelope-open"></i>Messages</a></li>
+                            <li><a href="profile.html"><i class="icon-user"></i>My Profile</a></li>
+                            <li><a href="javascript:void(0);"><i class="icon-envelope-open"></i>Messages</a></li>
                             <li><a href="javascript:void(0);"><i class="icon-question"></i>Q&As</a></li>
                             <li class="divider"></li>
-                            <li><a href="index.html"><i class="icon-power"></i>Sign out</a></li>
+                            <li><a class="sign-out" style="cursor: pointer"><i class="icon-power"></i>Sign out</a></li>
                         </ul>
                     </div>
                 </div>
@@ -583,86 +584,8 @@
                                         <!-- <th style="width: 0px;"></th> -->
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <!-- <td>
-                                            <span></span>
-                                        </td> -->
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div class="card">
-                                                    <div class="body" style="padding: 0; margin: 0;">
-                                                        <div class="row">
-                                                            <div class="col-lg-4 col-md-6">
-                                                                <img src="images/team/team-01.jpg" data-toggle="tooltip"
-                                                                    data-placement="top" title="Mark Holt" alt="Avatar"
-                                                                    class="rounded" style="width: 100%; height: 300px;">
-                                                            </div>
-                                                            <div class="col-lg-6 col-md-12">
-                                                                <div class="d-flex align-items-center" style="height: 100px;">
-                                                                    <h1 class="mt-3 mb-3">Mark Holt</h1>
-                                                                </div>
-                                                                <div class="d-flex align-items-center" style="height: 60px;">
-                                                                    <label class="d-block">Realtor</label>
-                                                                </div>
-                                                                <div class="d-flex align-items-center" style="height: 60px;">
-                                                                    <label class="d-block">(617) 782 2000</label>
-                                                                </div>
-                                                                <!-- <div class="form-group">
-                                                                    <label class="d-block">Realtor</label>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label class="d-block">(617) 782 2000</label>
-                                                                </div> -->
-                                                            </div>
-                                                            <div class="col-lg-2 col-md-12 text-right">
-                                                                <img src="images/icon-brown3.png" data-toggle="tooltip"
-                                                                    data-placement="top" title="Company Logo"
-                                                                    alt="Logo" class="w40 h40 rounded mt-3 mr-3 mb-3">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="body">
-                                                        <div class="row">
-                                                            <div class="col-lg-8 col-md-12">
-                                                                <div class="form-group">
-                                                                    <label class="d-block">Mark Holt</label>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label class="d-block">Realtor</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-4 col-md-6 pt-2 text-right">
-                                                                <button type="button"
-                                                                    class="btn btn-sm btn-outline-success"
-                                                                    title="Download vCard" data-toggle="tooltip"
-                                                                    data-placement="top"><i
-                                                                        class="icon-cloud-download"></i></button>
-                                                                <button type="button"
-                                                                    class="btn btn-sm btn-outline-success"
-                                                                    title="Share card" data-toggle="tooltip"
-                                                                    data-placement="top"><i
-                                                                        class="icon-share"></i></button>
-                                                                <button type="button"
-                                                                    class="btn btn-sm btn-outline-success"
-                                                                    title="Edit card" data-toggle="tooltip"
-                                                                    data-placement="top"><i
-                                                                        class="icon-pencil"></i></button>
-                                                                <button type="button"
-                                                                    class="btn btn-sm btn-outline-danger"
-                                                                    title="Delete card" data-toggle="tooltip"
-                                                                    data-placement="top"><i
-                                                                        class="icon-trash"></i></button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <!-- <td>
-                                            <span></span>
-                                        </td> -->
-                                    </tr>
+                                <tbody id="cards">
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -670,21 +593,9 @@
                     <div class="col-lg-4 col-md-12">
                         <a class="card" href="javascript:void(0)">
                             <div class="body text-center">
-                                <img class="img-thumbnail rounded-circle" src="images/team/team-01.jpg" alt="">
-                                <h6 class="mt-3">Mark Holt</h6>
-                                <div class="text-center text-muted">Realtor</div>
-                            </div>
-                            <div class="card-footer text-center">
-                                <div class="row clearfix">
-                                    <div class="col-6">
-                                        <i class="fa fa-tag font-22"></i>
-                                        <div><span class="text-muted">9 Badges</span></div>
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fa fa-dollar font-22"></i>
-                                        <div><span class="text-muted">$ 3.100</span></div>
-                                    </div>
-                                </div>
+                                <img class="img-thumbnail rounded-circle user-photo" src="images/profile_placeholder.png" alt="">
+                                <h6 class="mt-3 user-name">Mark Holt</h6>
+                                <div class="text-center text-muted user-occupation">Realtor</div>
                             </div>
                         </a>
                     </div>
@@ -695,13 +606,32 @@
 
     </div>
 
+    <!-- Import and configure the Firebase SDK -->
+    <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+    <!-- If you do not want to serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+    <script src="/__/firebase/7.15.5/firebase-app.js"></script>
+    <script src="/__/firebase/7.15.5/firebase-auth.js"></script>
+    <script src="/__/firebase/7.15.5/firebase-storage.js"></script>
+    <script src="/__/firebase/7.15.5/firebase-messaging.js"></script>
+    <script src="/__/firebase/7.15.5/firebase-firestore.js"></script>
+    <script src="/__/firebase/7.15.5/firebase-database.js"></script>
+    <script src="/__/firebase/7.15.5/firebase-performance.js"></script>
+    <script src="/__/firebase/init.js"></script>
+
     <!-- Javascript -->
+    <script src="scripts/jquery-min.js"></script>
     <script src="scripts/bundles/libscripts.bundle.js"></script>
     <script src="scripts/bundles/vendorscripts.bundle.js"></script>
 
     <script src="scripts/bundles/c3.bundle.js"></script>
 
+    <script src="scripts/vendor/sweetalert/sweetalert.min.js"></script><!-- SweetAlert Plugin Js -->
     <script src="scripts/bundles/mainscripts.bundle.js"></script>
+    
+    <!-- <script src="scripts/js/pages/ui/dialogs.js"></script> -->
+
+    <script src="scripts/items.js"></script>
+    
 </body>
 
 </html>

@@ -120,6 +120,7 @@
 
 function signIn() {
   // TODO 1: Sign in Firebase with credential from the Google user.
+  console.log('Here: ')
 
   var provider = new firebase.auth.OAuthProvider('apple.com');
   provider.addScope('email');
@@ -138,6 +139,7 @@ function signIn() {
       }
       // The signed-in user info.
       var user = result.user;
+      console.log('result user: ', result.user)
       // window.location.href = "items.html"
     })
     .catch(function (error) {
@@ -192,8 +194,10 @@ function requestNotificationsPermissions() {
 function authStateObserver(user) {
   if (user) { // User is signed in!
     // Get the signed-in user's profile pic and name.
+    console.log('user: ', user)
     var profilePicUrl = getProfilePicUrl();
     var userName = getUserName();
+    console.log('user: ', userName)
 
     // Set the user's profile pic and name.
     userPicElement.style.backgroundImage = 'url(' + addSizeToGoogleProfilePic(profilePicUrl) + ')';
@@ -202,10 +206,16 @@ function authStateObserver(user) {
     // Show user's profile and sign-out button.
     userNameElement.removeAttribute('hidden');
     userPicElement.removeAttribute('hidden');
-    signOutButtonElement.removeAttribute('hidden');
+    for (var i = 0; i < signOutButtonElements.length; i++) {
+      signOutButtonElements[i].removeAttribute('hidden');
+    }
+    // signOutButtonElement.removeAttribute('hidden');
 
     // Hide sign-in button.
-    signInButtonElement.setAttribute('hidden', 'true');
+    for (var i = 0; i < signInButtonElements.length; i++) {
+      signInButtonElements[i].setAttribute('hidden', 'true');
+    }
+    // signInButtonElement.setAttribute('hidden', 'true');
 
     window.location.href = "items.html"
 
@@ -214,10 +224,16 @@ function authStateObserver(user) {
     // Hide user's profile and sign-out button.
     userNameElement.setAttribute('hidden', 'true');
     userPicElement.setAttribute('hidden', 'true');
-    signOutButtonElement.setAttribute('hidden', 'true');
+    for (var i = 0; i < signOutButtonElements.length; i++) {
+      signOutButtonElements[i].setAttribute('hidden', 'true');
+    }
+    // signOutButtonElement.setAttribute('hidden', 'true');
 
     // Show sign-in button.
-    signInButtonElement.removeAttribute('hidden');
+    for (var i = 0; i < signInButtonElements.length; i++) {
+      signInButtonElements[i].removeAttribute('hidden');
+    }
+    // signInButtonElement.removeAttribute('hidden');
     
   }
 }
@@ -268,14 +284,20 @@ var imageFormElement = document.getElementById('image-form');
 var mediaCaptureElement = document.getElementById('mediaCapture');
 var userPicElement = document.getElementById('user-pic');
 var userNameElement = document.getElementById('user-name');
-var signInButtonElement = document.getElementById('sign-in');
-var signOutButtonElement = document.getElementById('sign-out');
+var signInButtonElements = document.getElementsByClassName('sign-in');
+var signOutButtonElements = document.getElementsByClassName('sign-out');
 var signInSnackbarElement = document.getElementById('must-signin-snackbar');
 
 // Saves message on form submit.
 // messageFormElement.addEventListener('submit', onMessageFormSubmit);
-signOutButtonElement.addEventListener('click', signOut);
-signInButtonElement.addEventListener('click', signIn);
+
+for (var i = 0; i < signInButtonElements.length; i++) {
+  signInButtonElements[i].addEventListener('click', signIn)
+}
+
+for (var i = 0; i < signOutButtonElements.length; i++) {
+  signOutButtonElements[i].addEventListener('click', signOut)
+}
 
 // Toggle for the button.
 // messageInputElement.addEventListener('keyup', toggleButton);
