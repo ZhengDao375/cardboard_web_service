@@ -1,0 +1,38 @@
+/* body
+*************************************************************/
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  font-display: swap;
+}
+::selection {
+  background-color: #000;
+  color: #fff;
+}
+
+/* header
+*************************************************************/
+
+header {
+  background-color: #A37755!important;
+}
+#hero-area {
+  background: transparent;
+}
+.brand {
+  max-width: 50px;
+}
+.brandname {
+  top: 15px;
+  position: relative;
+  margin-left: 10px;
+  vertical-align: top;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 26px;
+  letter-spacing: .02em;
+  color: #fff;
+}
