@@ -172,7 +172,7 @@ function authStateObserver(user) {
         // We save the Firebase Messaging Device token and enable notifications.
     } else { // User is signed out!
         // Hide user's profile and sign-out button.
-        window.location.href = "index.html"
+        // window.location.href = "index.html"
     }
 }
 

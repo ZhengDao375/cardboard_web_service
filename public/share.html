@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="styles/vendor/dropify/css/dropify.min.css">
     <link rel="stylesheet" href="styles/vendor/jquery-steps/jquery.steps.css">
 
+    <link rel="stylesheet" href="styles/vendor/parsleyjs/css/parsley.css">
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="styles/site.min.css">
 
@@ -593,11 +595,62 @@
                             </table>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12">
+                    <div class="col-lg-3 col-md-12">
                         <a class="card" href="javascript:void(0)">
                             <div class="body text-center">
-                                <img class="img-thumbnail rounded-circle user-photo"
-                                    src="images/profile_placeholder.png" alt="">
+                                <form id="advanced-form" data-parsley-validate novalidate>
+                                    <div class="form-group">
+                                        <div class="row clearfix">
+                                            <div class="col-lg-12 col-md-12">
+                                                <label class="control-inline fancy-checkbox">
+                                                    <h4>Send Zheng dao your contact details</h4>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" id="text-input1" class="form-control" placeholder="Name"
+                                            required>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" id="text-input2" class="form-control"
+                                                    placeholder="Occupation">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" id="text-input2" class="form-control"
+                                                    placeholder="Company">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" id="text-input2" class="form-control" placeholder="Email"
+                                            required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" id="text-input3" class="form-control" placeholder="Phone"
+                                            required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" id="text-input4" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row clearfix">
+                                            <div class="col-lg-12 col-md-12">
+                                                <label class="control-inline fancy-checkbox">
+                                                    <input type="checkbox" name="checkbox3">
+                                                    <span>By using Cardboard, I accept the Terms & Conditions and
+                                                        Privacy Policy</span>
+                                                </label>
+                                                <p id="error-checkbox3"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-info">Submit</button>
+                                </form>
                                 <h6 class="mt-3 user-name"></h6>
                                 <div class="text-center text-muted user-occupation"></div>
                             </div>
@@ -635,10 +688,11 @@
     <script src="scripts/bundles/mainscripts.bundle.js"></script>
     <script src="scripts/js/pages/forms/dropify.js"></script>
     <script src="scripts/js/pages/forms/form-wizard.js"></script>
+    <script src="scripts/vendor/parsleyjs/js/parsley.min.js"></script>
 
     <!-- <script src="scripts/js/pages/ui/dialogs.js"></script> -->
 
-    <script src="scripts/items.js"></script>
+    <script src="scripts/share.js"></script>
 
 </body>
 

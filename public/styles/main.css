@@ -822,7 +822,7 @@ hr {
   color: #fff;
   overflow: hidden;
   position: relative;
-  background: #f8f9fb;
+  background: #fff;
   height: 100vh;
 }
 .particles_js .contents,
