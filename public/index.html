@@ -46,7 +46,7 @@
   <meta name="msapplication-TileColor" content="#3372DF">
   <meta name="msapplication-navbutton-color" content="#303F9F">
 
-  <link rel="icon" href="images/icon-brown3.png" type="image/x-icon">
+  <link rel="icon" href="images/cardboard-icon.png" type="image/x-icon">
 
   <!-- Web Application Manifest -->
   <link rel="manifest" href="manifest.json">
@@ -68,8 +68,9 @@
 
 <body>
   <!-- Header Area wrapper Starts -->
-  <header id="header-wrap" style="color: #fff;">
-    <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+  <header id="header-wrap" class='gold' style="color: #fff;">
+    <span id='home'></span>
+    <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar">
       <div class="container">
         <div class="navbar-header">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar"
@@ -88,7 +89,7 @@
         </div>
         <div class="collapse navbar-collapse" id="main-navbar">
           <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
-            <li class="nav-item active"><a class="nav-link" href="#hero-area">Home</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
             <li class="nav-item"><a class="nav-link" href="#feature">Feature</a></li>
             <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
@@ -103,6 +104,8 @@
               Sign-out
             </a>
             <a class="btn btn-dark btn-rounded sign-in">
+              <svg class="apple-logo" width="100%" height="100%" viewBox="0 0 4167 4947" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path id="path4" d="M4079.34,3854.95c-74.808,172.823 -163.357,331.905 -265.951,478.163c-139.846,199.386 -254.348,337.4 -342.591,414.041c-136.793,125.8 -283.356,190.226 -440.301,193.89c-112.67,0 -248.546,-32.061 -406.712,-97.098c-158.685,-64.732 -304.516,-96.793 -437.858,-96.793c-139.845,0 -289.828,32.061 -450.254,96.793c-160.67,65.037 -290.103,98.93 -389.064,102.289c-150.502,6.412 -300.515,-59.847 -450.254,-199.082c-95.572,-83.357 -215.112,-226.257 -358.317,-428.697c-153.647,-216.18 -279.966,-466.864 -378.926,-752.662c-105.984,-308.699 -159.113,-607.627 -159.113,-897.028c0,-331.507 71.633,-617.428 215.112,-857.028c112.762,-192.456 262.775,-344.271 450.529,-455.72c187.753,-111.449 390.621,-168.242 609.092,-171.876c119.541,0 276.302,36.977 471.109,109.648c194.257,72.915 318.989,109.892 373.675,109.892c40.885,0 179.448,-43.236 414.346,-129.434c222.135,-79.938 409.614,-113.037 563.2,-99.999c416.178,33.588 728.846,197.647 936.782,493.216c-372.209,225.524 -556.329,541.398 -552.665,946.615c3.359,315.629 117.861,578.283 342.897,786.83c101.983,96.793 215.875,171.601 342.591,224.73c-27.48,79.694 -56.488,156.029 -87.327,229.31Zm-954.492,-3755.99c0,247.39 -90.381,478.376 -270.532,692.175c-217.402,254.165 -480.36,401.034 -765.517,377.859c-3.634,-29.68 -5.741,-60.916 -5.741,-93.74c0,-237.493 103.388,-491.658 286.989,-699.472c91.663,-105.221 208.242,-192.71 349.614,-262.501c141.067,-68.751 274.501,-106.771 399.996,-113.282c3.664,33.072 5.191,66.146 5.191,98.958l0,0.003Z" style="fill:#fff;fill-rule:nonzero;"/>
+              </svg>
               Sign in with Apple
             </a>
           </div>
@@ -110,16 +113,16 @@
       </div>
       <div class="mobile-menu">
         <ul class="navbar-nav">
-          <li><a class="page-scroll" href="#hero-area">Home</a></li>
+          <li><a class="page-scroll" href="#home">Home</a></li>
           <li><a class="page-scroll" href="#services">Services</a></li>
-          <li><a class="page-scroll" href="#feature">feature</a></li>
+          <li><a class="page-scroll" href="#feature">Feature</a></li>
           <li><a class="page-scroll" href="#team">Team</a></li>
           <li><a class="page-scroll" href="#pricing">Pricing</a></li>
           <li><a class="page-scroll" href="#contact">Contact</a></li>
           <!-- <li><a hidden class="btn btn-border sign-out" href="">Sign-out</a></li>
           <li><a class="btn btn-border sign-in" href="">Sign in with Apple</a></li> -->
         </ul>
-        <div class="btn-sing float-left">
+        <div class="btn-sing">
           <!-- <a class="btn btn-border" href="../html/page-login.html">Sign In</a> -->
           <div hidden id="user-pic"></div>
           <div hidden id="user-name"></div>
@@ -140,21 +143,29 @@
           <div class="col-lg-6 col-md-12">
             <div class="contents text-center">
               <h1 class="head-title wow fadeInUp">Cardboard</h1>
-              <p style="color: #585b60;">We are here to make digital, contact-free cards a smarter alternative to paper cards</p>
+              <p>
+                We are here to make digital, contact-free cards a smarter alternative to paper cards.
+                <span class='row' style='margin-left:0'>
+                  <a class='btn btn-gold' href='#services'>Read more</a>
+                </span>
+              </p>
             </div>
           </div>
           <div class="col-lg-6 col-md-12">
-            <div class="img-thumb text-center wow fadeInUp" data-wow-delay="0.6s">
-              <img class="img-fluid" src="images/app-landing.png" alt="">
+            <div class="img-thumb app-screenshot text-center wow fadeInUp" data-wow-delay="0.6s">
+              <img class="img-fluid app-home" src="images/app-home-screen.png" alt="Cardboard App Home Screenshot">
             </div>
           </div>
 
         </div>
       </div>
-      <div id="particles-js"></div>
+      <!-- <div id="particles-js"></div> -->
     </div>
     <!-- Hero Area End -->
-
+    <div class='diagnal'>
+      <svg class='diagnal-shape' width="100%" height="100%" viewBox="0 0 4375 625" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M4375,0l-4375,625c0,0 4375,0 4375,0l0,-625Z" style="fill:#fff;"/>
+      </svg>
+    </div>
   </header>
 
   <section id="services" class="section-padding">
